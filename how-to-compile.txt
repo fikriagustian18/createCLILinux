@@ -1,0 +1,21 @@
+Compile : 
+$ csc -out:mytools.exe RecType1.cs JSONHelper.cs main.cs 
+
+- Mengkonversi menjadi file json
+$ mytools /var/log/nginx/error.log -t json
+
+- Mengkonversi menjadi file text
+$ mytools /var/log/nginx/error.log -t text
+
+- Jika user tidak memasukan salah satu flag, maka default outputnya adalah PlainText.
+$ mytools /var/log/nginx/error.log
+
+- User juga bisa memilih dimana dia akan meletakan file output tersebut. Dengan
+menggunakan flag -o.
+$ mytools /var/log/nginx/error.log -o /User/johnmayer/Desktop/nginxlog.txt
+atau
+$ mytools /var/log/nginx/error.log -t json -o /User/johnmayer/Desktop/nginxlog.json
+
+- Tools tersebut juga harus memiliki flag -h yang berfungsi menampilkan petunjuk
+penggunaanya.
+$ mytools -h

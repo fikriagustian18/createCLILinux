@@ -1,0 +1,21 @@
+Program mytools adalah utility program untuk strukturkan error.log dari website-server nginx.
+Program ini miliki 3 operand. Operand pertama -h akan tampilkan file ini (petunjuk pemakaian).
+Tiap operand yang ikuti -h akan diabaikan. Punctuator - awali virtual-operand h.
+Actual-operand yang di-bind ke virtual-operand t bersifat hardcoded ke read-me.text file.
+
+Operand -t dipakai untuk tetapkan type dari output. Punctuator - awali virtual-operand t.
+Rentang nilai actual-operand yang valid untuk t adalah text dan json.
+Actual-operand di-bind ke virtual-operand t secara name-binding.
+
+Nilai default yang di-bind ke virtual-operand t adalah text. Sehingga, bila t tidak specified, 
+program utility mytools anggap bahwa (nilai) actual-operand adalah text.
+
+Operand -o dipakai untuk specify output file. Punctuator - awali virtual-operand o.
+Rentang nilai actual-operand yang valid untuk string-value yang valid dengan length > 4 
+karena minimal postfix filename saja sudah 4 (yaitu .txt).
+Actual-operand bersifat absolute-path dan di-bind ke virtual-operand o secara name-binding.
+
+Versi awal program ini mungkin belum handle beberapa errors properly. Sebagai contoh: not 
+permitted writing di sebuah folder, not enough free space, dan beberapa error lain.
+
+Program ini bersifat copyleft untuk reviewer yang assign pembuatan program ini.
